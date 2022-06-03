@@ -85,7 +85,7 @@ var UnityLoader = UnityLoader || {
                                 f.next_out = a,
                                 f.avail_out = p - a,
                                 a && s.arraySet(f.output, f.output, o, a, 0),
-                                this.onData(u)) : this.onData(s.shrinkBuf(f.output, f.next_out)))),
+                                this.onData) : this.onData(s.shrinkBuf(f.output, f.next_out)))),
                                 0 === f.avail_in && 0 === f.avail_out && (m = !0)
                             } while ((f.avail_in > 0 || 0 === f.avail_out) && r !== l.Z_STREAM_END);
                             return r === l.Z_STREAM_END && (n = l.Z_FINISH),
