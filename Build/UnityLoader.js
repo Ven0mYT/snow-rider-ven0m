@@ -85,7 +85,7 @@ var UnityLoader = UnityLoader || {
                                 f.next_out = a,
                                 f.avail_out = p - a,
                                 a && s.arraySet(f.output, f.output, o, a, 0),
-                                this.onData) : this.onData(s.shrinkBuf(f.output, f.next_out)))),
+                                this.onData(u)) : this.onData(s.shrinkBuf(f.output, f.next_out)))),
                                 0 === f.avail_in && 0 === f.avail_out && (m = !0)
                             } while ((f.avail_in > 0 || 0 === f.avail_out) && r !== l.Z_STREAM_END);
                             return r === l.Z_STREAM_END && (n = l.Z_FINISH),
@@ -3416,7 +3416,7 @@ var UnityLoader = UnityLoader || {
                 }
                 ,
                 t.onload = function() {
-                    var o = JSON.parse(t.responseText);
+                    var= JSON.parse(t.responseText);
                     for (var a in o)
                         "undefined" == typeof n[a] && (n[a] = o[a]);
                     for (var i = !1, s = 0; s < n.graphicsAPI.length; s++) {
